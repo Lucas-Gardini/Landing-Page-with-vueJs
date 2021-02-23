@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preload" href="./style.css" as="style" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./resources/fontawesome/css/all.min.css" />
+		<link rel="stylesheet" href="./resources/hamburgers/dist/hamburgers.min.css" />
+		<title>SEU NEGÓCIO</title>
+	</head>
+	<body>
+		<div id="main">
+			<nav>
+				<div class="Icon_">
+					<!-- You can use a image too! -->
+					<i class="fas fa-icons"></i>
+				</div>
+				<div v-if="responsive_mode === 'desktop'" class="Redirects">
+					<a href="#">{{home}}</a>
+					<a href="#">{{services}}</a>
+					<a href="#">{{works}}</a>
+					<a href="#">{{about}}</a>
+					<a href="#">{{contact}}</a>
+				</div>
+				<div v-if="responsive_mode === 'desktop'" class="Socials">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-whatsapp"></i></a>
+				</div>
+				<div v-if="responsive_mode === 'mobile'" class="Socials-Toggler">
+					<button @click="activateMenu()" :class="hamburger" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</nav>
+			<div :class="active_mobile_nav">
+				<a href="#">{{home}}</a><br />
+				<a href="#">{{services}}</a><br />
+				<a href="#">{{works}}</a><br />
+				<a href="#">{{about}}</a><br />
+				<a href="#">{{contact}}</a><br />
+			</div>
+			<div id="content">a</div>
+			<div id="language-selector">
+				<button @click.prevent="changeLanguage('pt')">PT</button>
+				<button @click.prevent="changeLanguage('en')">EN</button>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>
