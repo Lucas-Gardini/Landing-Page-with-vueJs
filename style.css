@@ -8,12 +8,12 @@ body {
 	font-family: "Open Sans", sans-serif;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow: hidden !important;
 	background-color: #181818;
 }
 
 nav {
-	position: sticky;
+	position: fixed;
 	top: 0%;
 	left: 0%;
 	min-width: 100%;
@@ -114,10 +114,6 @@ a:focus:after {
 }
 
 .Socials-Toggler {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	margin: 0;
 	text-align: right;
 	font-size: x-large;
@@ -127,6 +123,10 @@ a:focus:after {
 
 .Socials-Toggler button {
 	outline: none !important;
+}
+
+.hamburger .hamburger--spin {
+	padding: 0px !important;
 }
 
 .hamburger-inner::before {
