@@ -43,13 +43,13 @@ const vue = new Vue({
 				this.active_mobile_nav = "mobile-nav";
 			}
 		},
-		activateMenu() {
+		toogleNav() {
 			if (!this.hamburger.includes("is-active")) {
 				this.hamburger = "hamburger hamburger--spin is-active";
-				this.active_mobile_nav = "mobile-nav active";
+				document.getElementById("mySidenav").style.width = "250px";
 			} else {
 				this.hamburger = "hamburger hamburger--spin";
-				this.active_mobile_nav = "mobile-nav";
+				document.getElementById("mySidenav").style.width = "0";
 			}
 		},
 	},
