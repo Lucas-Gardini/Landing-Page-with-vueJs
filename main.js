@@ -40,7 +40,6 @@ const vue = new Vue({
 			} else {
 				this.responsive_mode = "desktop";
 				this.hamburger = "hamburger hamburger--spin";
-				this.active_mobile_nav = "mobile-nav";
 			}
 		},
 		toogleNav() {

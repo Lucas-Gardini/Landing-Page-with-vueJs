@@ -24,13 +24,11 @@
 					<a href="#">{{about}}</a>
 					<a href="#">{{contact}}</a>
 				</div>
-				<div v-if="responsive_mode === 'desktop'" class="Socials">
-					<a href="#"><i class="fab fa-facebook"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-whatsapp"></i></a>
-				</div>
-				<div v-if="responsive_mode === 'mobile'" class="Socials-Toggler">
-					<button @click="toogleNav" :class="hamburger" type="button">
+				<div class="Socials">
+					<a v-if="responsive_mode === 'desktop'" href="#"><i class="fab fa-facebook"></i></a>
+					<a v-if="responsive_mode === 'desktop'" href="#"><i class="fab fa-instagram"></i></a>
+					<a v-if="responsive_mode === 'desktop'" href="#"><i class="fab fa-whatsapp"></i></a>
+					<button v-if="responsive_mode === 'mobile'" @click="toogleNav" :class="hamburger" type="button">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>

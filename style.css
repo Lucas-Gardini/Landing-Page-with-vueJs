@@ -126,7 +126,16 @@ a:focus:after {
 }
 
 .hamburger .hamburger--spin {
-	padding: 0px !important;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	place-items: center;
+}
+
+.hamburger-box {
+	margin: 0;
+	padding: 0;
 }
 
 .hamburger-inner::before {
