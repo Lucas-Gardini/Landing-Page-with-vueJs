@@ -38,10 +38,11 @@
 				</div>
 			</nav>
 			<div id="mySidenav" :class="active_mobile_nav">
-				<a href="#">About</a>
-				<a href="#">Services</a>
-				<a href="#">Clients</a>
-				<a href="#">Contact</a>
+				<a href="#">{{home}}</a>
+				<a href="#">{{services}}</a>
+				<a href="#">{{works}}</a>
+				<a href="#">{{about}}</a>
+				<a href="#">{{contact}}</a>
 			</div>
 			<div id="content">
 				<div v-if="page === 'home'" id="home">

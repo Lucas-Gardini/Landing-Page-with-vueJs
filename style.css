@@ -8,14 +8,8 @@ body {
 	font-family: "Open Sans", sans-serif;
 	margin: 0;
 	padding: 0;
-	background-image: url(./resources/background.jpg);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow-y: hidden;
-	overflow-x: hidden;
+	overflow: hidden;
+	background-color: #181818;
 }
 
 nav {
