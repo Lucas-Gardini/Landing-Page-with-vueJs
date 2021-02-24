@@ -113,15 +113,7 @@ a:focus:after {
 	grid-area: Socials;
 }
 
-.Socials-Toggler {
-	margin: 0;
-	text-align: right;
-	font-size: x-large;
-	width: 100%;
-	grid-area: Socials;
-}
-
-.Socials-Toggler button {
+.Socials button {
 	outline: none !important;
 }
 
@@ -212,6 +204,20 @@ a:focus:after {
 	bottom: 0%;
 }
 
+#language-selector button {
+	background-color: transparent;
+	border: transparent;
+	font-size: xx-large;
+}
+
+#language-selector button:hover {
+	cursor: pointer;
+}
+
+#language-selector button:focus {
+	outline: none;
+}
+
 .btn {
 	border: 3px solid white;
 	border-radius: 2px;
@@ -236,4 +242,28 @@ a:focus:after {
 .secondary {
 	color: #181818;
 	background-color: #ffffffac !important;
+}
+
+.pop-up {
+	transition: 0.2s;
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	place-items: center;
+	z-index: 9;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+.pop-up.active {
+	transition: 0.2s;
+	display: grid;
+}
+
+.pop-up .container {
+	background-color: white;
+	padding: 15px;
+	text-align: center;
 }

@@ -13,6 +13,7 @@ const vue = new Vue({
 			hamburger: "hamburger hamburger--spin",
 			active_mobile_nav: "mobile-nav",
 			page: "home",
+			pop_up: "pop-up",
 		};
 	},
 	methods: {
@@ -24,6 +25,7 @@ const vue = new Vue({
 					this.works = "TRABALHOS";
 					this.about = "SOBRE";
 					this.contact = "CONTATO";
+					this.pop_up = "pop-up";
 					break;
 				case "en":
 					this.home = "HOME";
@@ -31,6 +33,10 @@ const vue = new Vue({
 					this.works = "WORKS";
 					this.about = "ABOUT";
 					this.contact = "CONTACT";
+					this.pop_up = "pop-up";
+					break;
+				default:
+					this.pop_up = "pop-up active";
 					break;
 			}
 		},

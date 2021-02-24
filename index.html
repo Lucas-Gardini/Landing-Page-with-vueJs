@@ -12,6 +12,12 @@
 	</head>
 	<body>
 		<div id="main">
+			<div :class="pop_up">
+				<div class="container">
+					<button @click="changeLanguage('pt')">BR</button>
+					<button @click="changeLanguage('en')">EN</button>
+				</div>
+			</div>
 			<nav>
 				<div class="Icon_">
 					<!-- You can use a image too! -->
@@ -57,8 +63,7 @@
 				</div>
 			</div>
 			<div id="language-selector">
-				<button @click.prevent="changeLanguage('pt')">PT</button>
-				<button @click.prevent="changeLanguage('en')">EN</button>
+				<button style="color: white" @click.prevent="changeLanguage('showPopUp')"><i class="fas fa-language"></i></button>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
