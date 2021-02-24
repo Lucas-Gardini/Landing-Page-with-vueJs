@@ -38,13 +38,29 @@
 				</div>
 			</nav>
 			<div :class="active_mobile_nav">
-				<a href="#">{{home}}</a><br />
-				<a href="#">{{services}}</a><br />
-				<a href="#">{{works}}</a><br />
-				<a href="#">{{about}}</a><br />
-				<a href="#">{{contact}}</a><br />
+				<div>
+					<br />
+					<a href="#"><i class="fas fa-home"></i> {{home}}</a><br /><br />
+					<a href="#"><i class="fas fa-concierge-bell"></i> {{services}}</a><br /><br />
+					<a href="#"><i class="fas fa-tools"></i> {{works}}</a><br /><br />
+					<a href="#"><i class="fas fa-question-circle"></i> {{about}}</a><br /><br />
+					<a href="#"><i class="fas fa-phone"></i> {{contact}}</a><br /><br />
+				</div>
 			</div>
-			<div id="content">a</div>
+			<div id="content">
+				<div v-if="page === 'home'" id="home">
+					<h1 style="color: white; text-align: center">Lorem, ipsum dolor sit amet</h1>
+					<h6 style="color: white; text-align: justify">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa odit praesentium, officiis ea quibusdam
+						sapiente dolores in, quidem blanditiis laboriosam obcaecati consequatur fugiat beatae cumque iste
+						quisquam, omnis exercitationem magni.
+					</h6>
+					<div style="text-align: center" class="buttons">
+						<button class="btn primary">Lorem</button>&nbsp;&nbsp;&nbsp;
+						<button class="btn secondary">Ipsum</button>
+					</div>
+				</div>
+			</div>
 			<div id="language-selector">
 				<button @click.prevent="changeLanguage('pt')">PT</button>
 				<button @click.prevent="changeLanguage('en')">EN</button>

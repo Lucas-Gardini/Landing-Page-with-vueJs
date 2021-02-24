@@ -12,6 +12,7 @@ const vue = new Vue({
 			responsive_mode: "desktop",
 			hamburger: "hamburger hamburger--spin",
 			active_mobile_nav: "mobile-nav",
+			page: "home",
 		};
 	},
 	methods: {
@@ -38,6 +39,8 @@ const vue = new Vue({
 				this.responsive_mode = "mobile";
 			} else {
 				this.responsive_mode = "desktop";
+				this.hamburger = "hamburger hamburger--spin";
+				this.active_mobile_nav = "mobile-nav";
 			}
 		},
 		activateMenu() {
