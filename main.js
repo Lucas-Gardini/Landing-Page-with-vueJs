@@ -8,6 +8,8 @@ const vue = new Vue({
 			works: "WORKS",
 			about: "ABOUT",
 			contact: "CONTACT",
+			title: "YOUR TITLE GOES HERE",
+			welcome_text: "You can put a long text here to welcome visitors, or to describe your services, and etc",
 			// Variables
 			responsive_mode: "desktop",
 			hamburger: "hamburger hamburger--spin",
@@ -25,6 +27,9 @@ const vue = new Vue({
 					this.works = "TRABALHOS";
 					this.about = "SOBRE";
 					this.contact = "CONTATO";
+					this.title = "SEU TÍTULO VEM AQUI!";
+					this.welcome_text =
+						"Você pode colocar um texto longo aqui para dar as boas-vindas aos visitantes ou para descrever seus serviços, etc";
 					this.pop_up = "pop-up";
 					break;
 				case "en":
@@ -33,6 +38,8 @@ const vue = new Vue({
 					this.works = "WORKS";
 					this.about = "ABOUT";
 					this.contact = "CONTACT";
+					this.title = "YOUR TITLE GOES HERE";
+					this.welcome_text = "You can put a long text here to welcome visitors, or to describe your services, and etc";
 					this.pop_up = "pop-up";
 					break;
 				default:
@@ -62,6 +69,20 @@ const vue = new Vue({
 		this.makeResponsive();
 	},
 	mounted() {
+		var language = 1;
+		let ajax = new XMLHttpRequest();
+		ajax.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				let data = JSON.parse(this.responseText);
+				if (data.country == "Brazil" || data.country == "Portugal" || data.country == "Spain") {
+					language = "pt";
+					vue.changeLanguage(language);
+				}
+			}
+		};
+		console.log(language);
+		ajax.open("GET", "http://ip-api.com/json", true);
+		ajax.send();
 		window.addEventListener("resize", this.makeResponsive);
 	},
 });
